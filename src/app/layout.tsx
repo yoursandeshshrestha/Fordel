@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
+import { Kode_Mono, Fira_Mono } from "next/font/google";
 import "./globals.css";
+
+const kodeMono = Kode_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-kode-mono",
+});
+
+const firaMono = Fira_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-fira-mono",
+});
 
 export const metadata: Metadata = {
   title: "Fordel - No Talk, Only Code",
@@ -10,11 +23,19 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${kodeMono.variable} ${firaMono.variable}`}
+    >
       <head>
-      <link rel="icon" href="/fordel-logo.png" type="image/x-icon" />
+        <link rel="icon" href="/fordel-logo.png" type="image/x-icon" />
+        <link
+          href="https://fonts.cdnfonts.com/css/andale-mono"
+          rel="stylesheet"
+        />
       </head>
-      <body>{children}</body>
+      <body className={kodeMono.className}>{children}</body>
     </html>
   );
 }
