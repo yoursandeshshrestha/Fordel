@@ -921,6 +921,13 @@ const LogoData: LogoItem[] = [
     alt: "OpenStack Logo",
     external: true,
   },
+  {
+    id: 165,
+    name: "Bamboo",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bamboo/bamboo-original.svg",
+    alt: "Bamboo CI/CD Logo",
+    external: true,
+  },
 ];
 
 export default LogoData;
