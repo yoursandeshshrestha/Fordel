@@ -21,7 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = "" }) => {
           <br /> just <span>&lt;code/&gt;</span>
         </p>
 
-        <div className="flex gap-5 items-center mt-8">
+        <div className="flex flex-col md:flex-row gap-5 items-center mt-8">
           <EmailButton />
           <DownloadButton onClick={handleDownload} />
         </div>

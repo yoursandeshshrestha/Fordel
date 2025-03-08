@@ -61,8 +61,8 @@ const InteractiveLogo: React.FC<InteractiveLogoProps> = ({
         const distanceSquared = dx * dx + dy * dy;
         const maxDistanceSquared = 300 * 300;
 
-        const baseOpacity = 0.3;
-        const maxAdditionalOpacity = 0.7;
+        const baseOpacity = 0;
+        const maxAdditionalOpacity = 0.5;
 
         if (distanceSquared < maxDistanceSquared) {
           const t = 1 - Math.sqrt(distanceSquared) / 300;
