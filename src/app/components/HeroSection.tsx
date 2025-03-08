@@ -1,11 +1,16 @@
 import React from "react";
 import EmailButton from "./EmailButton";
+import DownloadButton from "./DownloadButton";
 
 interface HeroSectionProps {
   className?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ className = "" }) => {
+  const handleDownload = () => {
+    window.open("/Fordel Studios - Company Profile.pdf", "_blank");
+  };
+
   return (
     <div
       className={`absolute inset-0 flex flex-col justify-center items-center z-40 ${className}`}
@@ -16,7 +21,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = "" }) => {
           <br /> just <span>&lt;code/&gt;</span>
         </p>
 
-        <EmailButton />
+        <div className="flex gap-5 items-center mt-8">
+          <EmailButton />
+          <DownloadButton onClick={handleDownload} />
+        </div>
       </div>
     </div>
   );
