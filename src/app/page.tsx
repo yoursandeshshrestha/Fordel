@@ -15,7 +15,8 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setGridPositions(calculateGridPositions(LogoData.length, cellSize));
+      const positions = calculateGridPositions(0, cellSize);
+      setGridPositions(positions);
     };
 
     handleResize();
@@ -46,19 +47,17 @@ const Home: React.FC = () => {
       <HeroSection />
       <Footer />
       <InteractiveGrid>
-        {LogoData.map(
-          (logo, index) =>
-            gridPositions.length > index && (
-              <InteractiveLogo
-                key={logo.id}
-                src={logo.src}
-                alt={logo.alt}
-                mousePosition={mousePosition}
-                gridPosition={gridPositions[index]}
-                external={logo.external}
-              />
-            )
-        )}
+        {gridPositions.map((position, index) => (
+          <InteractiveLogo
+            key={`logo-${index}`}
+            src={LogoData[index % LogoData.length].src}
+            alt={LogoData[index % LogoData.length].alt}
+            mousePosition={mousePosition}
+            gridPosition={position}
+            external={LogoData[index % LogoData.length].external}
+            index={index}
+          />
+        ))}
       </InteractiveGrid>
     </main>
   );
