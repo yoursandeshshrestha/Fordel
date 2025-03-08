@@ -12,7 +12,7 @@ const EmailButton: React.FC<EmailButtonProps> = ({
   return (
     <a
       href={`mailto:${emailAddress}`}
-      className={`w-[270px] mt-8 px-6 py-2 bg-[#FFFBD0] text-black rounded-full font-medium flex items-center justify-center space-x-2 transition-all duration-300 ease-in-out hover:bg-[#FFE94B] font-fira-mono group ${className}`}
+      className={`w-[207px] px-6 py-2 bg-[#FFFBD0] text-black rounded-full font-medium flex items-center justify-center space-x-2 transition-all duration-300 ease-in-out hover:bg-[#FFE94B] font-fira-mono group ${className}`}
     >
       <span>email us</span>
       <svg
