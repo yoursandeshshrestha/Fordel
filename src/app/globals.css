@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.code-font {
+  font-family: "Andale Mono", monospace;
+}
+
+.font-fira-mono {
+  font-family: var(--font-fira-mono), monospace;
+}
