@@ -21,4 +21,4 @@ We’d love to work with you! Contact us to discuss your next big project.
 
 🌍 **[Fordel Studios](https://fordelstudios.com)**  
 
-**Made with ❤️ by Sandesh Shrestha**
+**Each line of code written with ❤️**
